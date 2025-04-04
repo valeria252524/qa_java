@@ -3,8 +3,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.List;
-import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.when;
+
 
 
 public class FelineTest {
@@ -38,11 +37,10 @@ public class FelineTest {
 
     @Test
     public void getKittensWithArgumentTest() {
-        Feline felineSpy = spy(feline);
         int expectedKittens = 4;
-        int actualKittens = 4;
-        when(felineSpy.getKittens(actualKittens)).thenReturn(expectedKittens);
-        Assert.assertEquals("Ожидаемые и фактические значения не совпадают. Ожидалось: " + expectedKittens + ", но получено: " + actualKittens, expectedKittens, actualKittens);
+        int actualKittens = feline.getKittens(expectedKittens);
+        Assert.assertEquals("Ожидаемые и фактические значения не совпадают. Ожидалось: "
+                + expectedKittens + ", но получено: " + actualKittens, expectedKittens, actualKittens);
     }
 
 }
