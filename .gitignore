@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
+/target/*
 
+# Но исключаем папку site внутри target
+!/target/site/
 ### IntelliJ IDEA ###
 .idea/
 *.iws
