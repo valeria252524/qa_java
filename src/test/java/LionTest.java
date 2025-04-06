@@ -30,10 +30,10 @@ public class LionTest {
 
     @Test
     public void getFoodTest() throws Exception {
-        when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-        List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+        List<String> food = List.of("Животные", "Птицы", "Рыба");
+        when(feline.getFood("Хищник")).thenReturn(food);
         List<String> actualFood = lion.getFood();
-        Assert.assertEquals("Ожидаемые и фактические значения не совпадают.", expectedFood, actualFood);
+        Assert.assertEquals("Ожидаемые и фактические значения не совпадают.", food, actualFood);
     }
     @Test(expected = Exception.class)
     public void invalidSexTest() throws Exception {

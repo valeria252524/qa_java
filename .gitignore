@@ -3,7 +3,7 @@
 /target/*
 
 # Но исключаем папку site внутри target
-!/target/site/
+!/target/site/jacoco
 ### IntelliJ IDEA ###
 .idea/
 *.iws

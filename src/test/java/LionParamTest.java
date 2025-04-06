@@ -36,8 +36,5 @@ public class LionParamTest {
         Assert.assertEquals("Для льва с полом " + sex + " неверно определено наличие гривы.",
                 hasMane, lion.doesHaveMane());
     }
-    @Test(expected = Exception.class)
-    public void invalidSexTest() throws Exception {
-        lion = new Lion("Львенок", feline);
-    }
+
 }

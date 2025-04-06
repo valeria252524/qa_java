@@ -16,6 +16,7 @@
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
+            <!-- Плагин компилятора Maven -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -25,6 +26,8 @@
                     <target>11</target>
                 </configuration>
             </plugin>
+
+            <!-- Плагин JaCoCo для покрытия кода -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -58,12 +61,15 @@
     </build>
 
     <dependencies>
+        <!-- Зависимость для JUnit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Зависимость для Mockito -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -71,5 +77,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 </project>
